@@ -44,13 +44,13 @@ var quotes = [
 
 ];
    
-  console.log(quotes);
+ // console.log(quotes);
   
 
 
   
 /***
-  I created a `getRandomQuote` function, with a variable that stores a random number, then used the random number to `return` a random quote object from the `quotes` array.
+  I created a `getRandomQuote` function and a variable that stores a random number, then used the random number to `return` a random quote object from the `quotes` array.
 ***/
 
 
@@ -58,22 +58,25 @@ function getRandomQuote() {
   var randomNumber = Math.floor(Math.random() * quotes.length);
   return quotes [randomNumber];
 };
-console.log(getRandomQuote());
 
+//console.log(getRandomQuote());
+
+getRandomQuote();
 
 
 
 /***
   Also here, i created a `printQuote` function,
-  - Called the `getRandomQuote` function and assigned it to a variable "result".
-   Created a variable for a HTML string "message" and set it equal to an empty string.
-   - Use the HTML template in the instructions or the markup in the index.html file, AND 
-     the random quote vairable to build your HTML string.
-   - Add the quote and source section to the HTML string.
-   - Use an if statement to check for the citation property before adding it to the HTML string.
-   - Use an if statement to check for the year property before adding it to the HTML string.
-   - Don't forget to close that final `p` tag.
-   - Set the `innerHTML` of the `quote-box` div to the HTML string. 
+  Called the `getRandomQuote` function and assigned it to a variable "result".
+
+  Created a variable for a HTML string "message" and set it equal to an empty string.
+  
+  I concatenated into the empty string variable 'message', an HTML string, adding the quote and source section from the quotes array object with a
+    provided HTML template in the instructions, and the random quote vairable.
+
+  To test if the quote object has a year and citation property before adding it to the HTML string, a conditional statement 'if' is required.
+
+   After the if statement test, i Set the `innerHTML` of the `quote-box` div to the HTML string. 
 ***/
  
 function printQuote() {
@@ -90,12 +93,32 @@ function printQuote() {
 
   if (result.year) {
    message += "<span class='year'>"  + result.year + "</span>" 
-  };
- 
+  }
+
+
   message += "</p>";
   document.getElementById('quote-box').innerHTML = message
- 
+
+
+
+
+/*** Random background color    (Extra credit)***/ 
+
+function random_bg_color() {
+  var x = Math.floor(Math.random() * 256);
+  var y = Math.floor(Math.random() * 256);
+  var z = Math.floor(Math.random() * 256);
+  var bgColor = "rgb(" + x + "," + y + "," + z + ")";
+
+  console.log(bgColor);
+
+  document.body.style.background = bgColor;
+  }
+
+  random_bg_color();
 }
+
+printQuote();
 
 
 
