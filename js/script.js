@@ -109,12 +109,12 @@ function printQuote() {
 
 
 
-/*** Random background color (Extra credit)***/ 
+  // Random background color (Extra credit) 
 
-function random_bg_color() {
-  var x = Math.floor(Math.random() * 256);
-  var y = Math.floor(Math.random() * 256);
-  var z = Math.floor(Math.random() * 256);
+  function random_bg_color() {
+  var x = Math.floor(Math.random() * 255);
+  var y = Math.floor(Math.random() * 255);
+  var z = Math.floor(Math.random() * 255);
   var bgColor = "rgb(" + x + "," + y + "," + z + ")";
 
 
@@ -124,13 +124,19 @@ function random_bg_color() {
 
   random_bg_color();
 
+
+
+  // Set interval code (Extra credit)
+
 }
+
+
 
 printQuote();
 
 
+setInterval(function() { printQuote(); }, 10000);
+
 
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
 
-
-//Remember to delete the comments that came with this file, and replace them with your own code comments.
