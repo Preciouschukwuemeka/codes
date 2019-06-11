@@ -135,7 +135,7 @@ function printQuote() {
 printQuote();
 
 
-setInterval(function() { printQuote(); }, 10000);
+setInterval(function() { printQuote(); }, 20000);
 
 
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
