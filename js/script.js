@@ -8,10 +8,14 @@ project 1 - A Random Quote Generator
 
 
 
+
 /*** 
   I created an array of quotes object and added five quotes to it.
   Assigned each quote object a `quote` and `source` property, and one of the quotes with a `citation` and `year` property.
   ***/
+
+
+
 
 var quotes = [
  
@@ -44,8 +48,8 @@ var quotes = [
 
 ];
    
- // console.log(quotes);
   
+
 
 
   
@@ -59,9 +63,10 @@ function getRandomQuote() {
   return quotes [randomNumber];
 };
 
-//console.log(getRandomQuote());
-
 getRandomQuote();
+
+
+
 
 
 
@@ -79,6 +84,8 @@ getRandomQuote();
    After the if statement test, i Set the `innerHTML` of the `quote-box` div to the HTML string. 
 ***/
  
+
+
 function printQuote() {
 
   var result = getRandomQuote();
@@ -102,7 +109,7 @@ function printQuote() {
 
 
 
-/*** Random background color    (Extra credit)***/ 
+/*** Random background color (Extra credit)***/ 
 
 function random_bg_color() {
   var x = Math.floor(Math.random() * 256);
@@ -110,7 +117,7 @@ function random_bg_color() {
   var z = Math.floor(Math.random() * 256);
   var bgColor = "rgb(" + x + "," + y + "," + z + ")";
 
-  console.log(bgColor);
+
 
   document.body.style.background = bgColor;
   }
