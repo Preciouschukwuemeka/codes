@@ -67,7 +67,6 @@ function getRandomQuote() {
   return quotes [randomNumber];
 };
 
-getRandomQuote();
 
 
 
@@ -120,18 +119,18 @@ function printQuote() {
 
   // Random background color (Extra credit) 
 
-  function random_bg_color() {
-  var x = Math.floor(Math.random() * 256);
-  var y = Math.floor(Math.random() * 256);
-  var z = Math.floor(Math.random() * 256);
-  var bgColor = "rgb(" + x + "," + y + "," + z + ")";
+  function randomBgColor() {
+  var r = Math.floor(Math.random() * 256);
+  var g = Math.floor(Math.random() * 256);
+  var b = Math.floor(Math.random() * 256);
+  var bgColor = "rgb(" + r + "," + g + "," + b + ")";
 
 
 
   document.body.style.background = bgColor;
   }
 
-  random_bg_color();
+  randomBgColor();
 
 
 
@@ -140,8 +139,6 @@ function printQuote() {
 }
 
 
-
-printQuote();
 
 
 setInterval(function() { printQuote(); }, 20000);
