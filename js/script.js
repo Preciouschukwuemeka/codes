@@ -3,6 +3,9 @@ Treehouse FSJS Techdegree:
 project 1 - A Random Quote Generator
 ******************************************/
 
+// Name  -  PRECIOUS C. CHUKWUEMEKA
+
+
 // Study guide for this project - https://drive.google.com/file/d/1s5grutGuQFwJcQP8bFwEI69Q8FCkGdDk/view?usp=sharing
 
 
@@ -23,27 +26,28 @@ var quotes = [
     quote: "I learned that courage was not the absence of fear, but the triumph over it. The brave man is not he who does not feel afraid, but he who conquers that fear.",
     source: "Nelson mandela",
     citation: "www.goalcast.com/2017/05/02/top-nelson-mandela-quotes-inspire-you-to-believe",
-    year: "2017"
-
+    year: "2017",
+    category: "Motivation"
   },
   {
      quote: "Life is about making an impact, not making an income.",
      source: "Kevin Kruse",
-
+     category: "Inspiration"
   },
   {
      quote: "I attribute my success to this: I never gave or took any excuse.",
-     source:"Florence Nightingale",
-
+     source: "Florence Nightingale",
+     category: "Inspiration"
   },
   {
-     quote:"You miss 100% of the shots you don’t take.",
-     source:"Wayne Gretzky",
-
+     quote: "You miss 100% of the shots you don’t take.",
+     source: "Wayne Gretzky",
+     category: "Motivation"
   },
   { 
      quote:"The mind is everything. What you think you become.",
-     source:"Buddha"
+     source:"Buddha",
+     category: "Motivation"
   }
 
 ];
@@ -100,6 +104,11 @@ function printQuote() {
 
   if (result.year) {
    message += "<span class='year'>"  + result.year + "</span>" 
+  };
+
+   if (result.category) {
+    message += "<span class='year'>"  + result.category + "</span>" 
+
   }
 
 
@@ -112,9 +121,9 @@ function printQuote() {
   // Random background color (Extra credit) 
 
   function random_bg_color() {
-  var x = Math.floor(Math.random() * 255);
-  var y = Math.floor(Math.random() * 255);
-  var z = Math.floor(Math.random() * 255);
+  var x = Math.floor(Math.random() * 256);
+  var y = Math.floor(Math.random() * 256);
+  var z = Math.floor(Math.random() * 256);
   var bgColor = "rgb(" + x + "," + y + "," + z + ")";
 
 
