@@ -14,7 +14,7 @@ project 1 - A Random Quote Generator
 
 /*** 
   I created an array of quotes object and added five quotes to it.
-  Assigned each quote object a `quote` and `source` property, and one of the quotes with a `citation` and `year` property.
+  Assigned each quote object a `quote`, `source`, and 'category' property, and one of the quotes with a `citation` and `year` property.
   ***/
 
 
